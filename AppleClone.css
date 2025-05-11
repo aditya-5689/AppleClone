@@ -1,0 +1,413 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: #1d1d1f;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #06c;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(250, 250, 252);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.75rem;
+    z-index: 9999;
+}
+
+.nav-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+.logo a {
+    font-size: 1.25rem;
+}
+
+.search i,
+.bag span {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.store {
+    position: relative;
+}
+.dropdown{
+    position: absolute;
+    top: 2.75rem;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(250, 250, 252);
+    display: none;
+    backdrop-filter: blur(5px);
+    animation: navbardropdown 0.5s ease-in-out;
+    padding-top: 0.5rem;
+}
+
+/* Add hover area for the dropdown */
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background: transparent;
+}
+
+.store:hover + .storedrop, 
+.mac:hover + .macdrop, 
+.ipad:hover + .ipaddrop, 
+.iphone:hover + .iphonedrop, 
+.watch:hover + .watchdrop, 
+.airpods:hover + .airpodsdrop, 
+.tv:hover + .tvdrop, 
+.entertainment:hover + .entertainmentdrop, 
+.accessories:hover + .accessoriesdrop, 
+.support:hover + .supportdrop,
+.storedrop:hover,
+.macdrop:hover,
+.ipaddrop:hover,
+.iphonedrop:hover,
+.watchdrop:hover,
+.airpodsdrop:hover,
+.tvdrop:hover,
+.entertainmentdrop:hover,
+.accessoriesdrop:hover,
+.supportdrop:hover {
+    display: block;
+}
+.dropdown-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-left: 14%;
+}
+.dropdown-section{
+    margin-right: 2rem;
+}
+.dropdown-section h3{
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 1rem;
+}
+.dropdown-section li a{
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+.links li a, .more li a{
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin: 0.5rem;
+}
+@keyframes navbardropdown{
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        height: (fit-content/2);
+        opacity: 0;
+    }
+    100% {
+        height: fit-content;
+        opacity: 1;
+    }
+}
+.emi{
+    margin-top: 2.75rem;
+    height: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 10px 0;
+    color: #1d1d1f;
+
+}
+.largecards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    max-width: 100%;
+}
+.cardl{
+    height: 36rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: gray;
+    color: #fff;
+}
+.l0{
+    background-image: url('hero_ai_geo__f9v31dli57ma_largetall.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(0,0,0,0.8);
+}
+.l0 .card-head{
+    position: relative;
+    top: 11rem;
+}
+.l0 .card-foot{
+    position: relative;
+    top: 11rem;
+    left: 0.5rem;
+    text-align: center;
+    color: #fff;
+}
+.l0 #h3marginbottom{
+    margin-bottom: 0rem;
+}
+.l0 #h3margintop{
+    margin-top: 0rem;
+}
+.l1{
+    background-image: url('hero_iphone16pro_avail__fnf0f9x70jiy_largetall.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.l2{
+    background-image: url('hero_iphone16_avail__euwzls69btea_largetall.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-title h1{
+    font-size: 3.25rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+}
+.card-title h3{
+    font-size: 1.65rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.card-button .learn{
+    width: 8rem;
+    height: 2.75rem;
+    background-color: #0071e3;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    right: 1.5rem;
+}
+.card-button .buy{
+    width: 4.5rem;
+    height: 2.75rem;
+    color: #2997ff;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #2997ff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(0,0,0,0);
+}
+.card-button .buy:hover{
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+}
+.card-title-small h1 img{
+    height: 2rem;
+    width: 2rem;
+}
+.smallcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+}
+.cards{
+    height: 36rem;
+    width: 49%;
+    text-align: center;
+    margin: 0.35rem;
+    background-color: gray;
+    color: #fff;
+}
+.s1{
+    background-image: url('promo_apple_watch_series_10_avail__b9etp10v9tn6_large.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.s2{
+    background-image: url('promo_macbook_air_avail__e8ksaudoisey_large.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.s3{
+    background-image: url('promo_ipad_air__bfbxzvw65c02_large.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.s4{
+    background-image: url('promo_macstudio_avail__byhwkp0o4gty_large.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.s5{
+    background-image: url('promo_ipadpro_avail__s271j89g8kii_large.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.s6{
+    background-image: url('promo_iphone_tradein__bugw15ka691e_large.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-title-small{
+    color: rgb(0,0,0,0.8);
+}
+.card-title-small h1{
+    font-size: 2.2rem;
+    font-weight: 550;
+    margin-top: 3rem;
+    margin-bottom: 0.2rem;
+}
+.card-title-small h3{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.card-title-small #ipadair-img-size{
+    height: 2.3rem;
+    width: 10rem;
+}
+#ipadpro-text-color{
+    color: #fff;
+}
+.card-button-small .learn-small{
+    width: 8rem;
+    height: 2.75rem;
+    background-color: #0071e3;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    right: 1.5rem;
+}
+.card-button-small .buy-small{
+    width: 4.5rem;
+    height: 2.75rem;
+    color: #2997ff;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    border: 1px solid #2997ff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(0,0,0,0);
+}
+#trade-in-button-width button{
+    width: 10rem;
+    padding: 0.75rem 1rem;
+}
+.card-button-small .buy-small:hover{
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+}
+.footer{
+    background-color: #f5f5f7;
+    margin: 1rem 0;
+    width: 100%;
+}
+.footer div{
+    width: 70%;
+    margin: 0 auto;
+}
+.footer div p{
+    font-size: 0.75rem;
+    color: #0000008f;
+    padding: 0.5rem 0;   
+    font-weight: 300;
+    word-spacing: 1px;
+}
+.footer div p a{
+    color: #0000008f;
+    text-decoration: underline;
+}
+.footer div p span a{
+    text-decoration: none;
+}
+.footer div p span a:hover{
+    text-decoration: underline;
+}
+.footer div .footer-contact a{
+    color: rgb(0, 160, 255);
+}
